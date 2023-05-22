@@ -1,0 +1,13 @@
+trigger:
+- main
+
+jobs:
+- job: CreateFoldersAndFiles
+  displayName: 'Create Folders and Files'
+  pool:
+    name: 'Default'
+  steps:
+  - checkout: self
+  - script: |
+      python create_folders_and_files.py
+    displayName: 'Execute Python Script'
