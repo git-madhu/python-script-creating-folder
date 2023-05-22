@@ -7,7 +7,7 @@ file_contents = [
 ]
 
 for folder in folders:
-    os.makedirs(folder, exist_ok=True) os.path.join(folder, exist_ok=True)
+    os.makedirs(folder, exist_ok=True)
     for i, content in enumerate(file_contents, start=1):
         file_name = f'{folder}/file{i}.txt'
         with open(file_name, 'w') as file:
